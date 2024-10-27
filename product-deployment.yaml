@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: productcatalog
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: productcatalog
+  template:
+    metadata:
+      labels:
+        app: productcatalog
+    spec:
+      containers:
+      - name: productcatalog
+        image: product_catalog
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5149

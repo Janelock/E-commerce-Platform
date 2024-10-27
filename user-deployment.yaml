@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: usermanagement
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: usermanagement
+  template:
+    metadata:
+      labels:
+        app: usermanagement
+    spec:
+      containers:
+      - name: usermanagement
+        image: user_management
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5036

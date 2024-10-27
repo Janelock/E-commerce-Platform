@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cartmanagement
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: cartmanagement
+  template:
+    metadata:
+      labels:
+        app: cartmanagement
+    spec:
+      containers:
+      - name: cartmanagement
+        image: cart_management
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5095

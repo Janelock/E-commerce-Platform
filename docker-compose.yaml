@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  CartManagement:
+    image: cart_management
+    # network_mode: bridge
+    # build:
+    #   context: ./
+    #   dockerfile: ./CartManagement/CartManagement/Dockerfile
+    # ports:
+    #   - "8080:5095"
+
+  UserManagement:
+    image: user_management
+    # network_mode: bridge
+    # build:
+    #   context: ./
+    #   dockerfile: ./UserManagement/UserManagement/Dockerfile
+    # ports:
+    #   - "8090:5095"
+
+  ProductCatalog:  
+    image: product_catalog
+    # network_mode: bridge
+    # build:
+    #   context: ./
+    #   dockerfile: ./ProductCatalog/ProductCatalog/Dockerfile
+    # ports:
+    #   - "8080:5149"
